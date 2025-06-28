@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "Afacad";
+    src: url('./fonts/afacad/Afacad-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: "Alegreya-sans";
+    src: url('./fonts/alegreya-sans/AlegreyaSans-Regular.ttf');
+}
+
+body{
+    height: 2000000px;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+    margin: 0;
+    display: none;
+}
+
+.header-1{
+    text-align: center;
+    background-color: darkblue;
+    padding: 1.5em;
+    color: white;
+    display: block;
+}
+
+.header-1 a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Alegreya-sans';
+    font-weight: 100;
+    font-size: 1.6em;
+    margin: 0 0.5em;
+}
+
+.header-1 h1 a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Afacad';
+    margin: 0 0;
+}
+
+.header-2{
+
+}
