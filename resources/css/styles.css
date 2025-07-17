@@ -7,10 +7,32 @@
     src: url('./fonts/alegreya-sans/AlegreyaSans-Regular.ttf');
 }
 
+@keyframes colorChange {
+    0%{background-color: rgb(134, 161, 214);}
+    25%{background-color: rgb(134, 170, 243);}
+    50%{background-color: rgb(61, 104, 190);}
+    75%{background-color: rgb(41, 72, 133);}
+    100%{background-color: rgb(19, 34, 65);}
+}
+
+@keyframes positionChange{
+    0%{left: 0;}
+    25%{left: 2%;}
+    50%{left: 4%;}
+    75%{left: 6%;}
+    100%{left: 8%;}
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
-    height: 2000000px;
     text-overflow: ellipsis;
     overflow-wrap: break-word;
+    margin: 0;
+    height: 100000000000px;
+    animation: colorChange 10s infinite alternate;
 }
 
 .header{
@@ -20,33 +42,86 @@ body{
     right: 0;
     border: 0;
     margin: 0;
-    display: none;
+    display: flex;
+    padding: 1em 10em;
+    transition: 0.2s;
+    z-index: 2;
+    align-items: center;
+
+    & h1{
+        font-family: 'Afacad';
+        margin: 0;
+        font-weight: 100;
+        font-size: 250%;
+
+        & a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    & .nav{
+        display: flex;
+        flex:1;
+        justify-content: right;
+
+        & .myList{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            display: flex;
+            gap: 50px;
+    
+            & .listItem{
+
+                & a{
+                    text-decoration: none;
+                    color: white;
+                    font-family: 'Alegreya-sans';
+                    font-size: 1.4em;
+                }
+            }
+        }
+    }
 }
 
-.header-1{
-    text-align: center;
-    background-color: darkblue;
-    padding: 1.5em;
-    color: white;
-    display: block;
+.img-phrase{
+    padding: 0 2em;
+    display: flex;
+    align-items: flex-end;
+    text-align: left;
 }
-
-.header-1 a{
-    text-decoration: none;
+.img-phrase h1{
     color: white;
-    font-family: 'Alegreya-sans';
-    font-weight: 100;
-    font-size: 1.6em;
-    margin: 0 0.5em;
-}
-
-.header-1 h1 a{
-    text-decoration: none;
-    color: white;
+    max-width: 7em;
+    max-height: 5em;
+    font-size: 7em;
+    margin: 0;
+    z-index: 1;
     font-family: 'Afacad';
-    margin: 0 0;
+}
+.img-phrase img{
+    position: absolute;
+    right: 0;
+    max-width: 80em;
+    overflow: clip;
+    z-index: 0;
+    animation: positionChange 5s infinite alternate;
 }
 
-.header-2{
+#sobre{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    z-index: 1;
+    font-size: 3em;
+    padding: 1em 2rem;
 
+    & h1{
+        font-family: 'Afacad';
+        margin-top: 0;
+    }
+
+    & p {
+        font-family: 'Alegreya-sans';
+    }
 }
