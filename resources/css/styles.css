@@ -15,15 +15,6 @@
     100%{background-color: rgb(19, 34, 65);}
 }
 
-@keyframes positionChange{
-    from{
-        left:0;
-    }
-    to{
-        left:5em;
-    }
-}
-
 html{
     scroll-behavior: smooth;
 }
@@ -32,7 +23,6 @@ body{
     text-overflow: ellipsis;
     overflow-wrap: break-word;
     margin: 0;
-    height: 100000000000px;
     animation: colorChange 10s infinite alternate;
 }
 
@@ -107,13 +97,11 @@ body{
     }
 
     & img{
-        position: fixed;
+        position: absolute;
         bottom: 0;
         width: 70rem;
         overflow: clip;
         z-index: 0;
-        animation: positionChange 5s infinite alternate;
-        animation-timing-function: linear;
     }
 }
 
@@ -129,6 +117,7 @@ body{
     padding-left: 1em;
     padding-right: 1em;
     padding-bottom: 1em;
+    font-family: "Alegreya-sans";
 
     & h1{
         font-family: 'Afacad';
@@ -136,7 +125,7 @@ body{
     }
 
     & p {
-        font-family: 'Alegreya-sans';
+        background-color: rgb(231, 229, 229);
     }
 }
 
@@ -158,53 +147,114 @@ body{
         font-family: 'Afacad';
         margin-top: 0;
     }
+}
 
-    & .linguagensList{
-        font-family: 'Alegreya-sans';
-        list-style-type: none;
-        padding-left: 0;
+#projetos{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 3em;
+    margin-top: 1em;
+    padding-top: 3.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
 
-        & h4{
-            margin-left: 0;
-            margin-right: 0;
-        }
+    & h1{
+        font-family: 'Afacad';
+        margin-top: 0;
+    }
+}
 
-        & .listItem{
-            margin-left: 1em;
-        }
+#contato{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 3em;
+    margin-top: 1em;
+    padding-top: 3.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    font-family: 'Alegreya-sans';
+
+    & h1{
+        margin-top: 0;
     }
 
-    & .linguasList{
-        font-family: 'Alegreya-sans';
-        list-style-type: none;
-        padding-left: 0;
+    & a{
+        color: black;
+    }
+}
+.mainList{
+    font-family: 'Alegreya-sans';
+    list-style-type: none;
+    padding-left: 0;
 
-        & h4{
-            margin-left: 0;
-            margin-right: 0;
-        }
-
-        & .listItem{
-            margin-left: 1em;
-        }
+    & h4{
+        margin-left: 0;
+        margin-right: 0;
     }
 
-    & .outrosList{
-        font-family: 'Alegreya-sans';
-        list-style-type: none;
-        padding-left: 0;
+    & .listItem{
+        margin-left: 1em;
+        background-color: rgb(231, 229, 229);
+    }
 
-        & h4{
-            margin-left: 0;
-            margin-right: 0;
-        }
+    & .listSubItem{
+        margin-left: 2em;
+        background-color: rgb(231, 229, 229);
+    }
+}
 
-        & .listItem{
-            margin-left: 1em;
-        }
+.mainList2{
+    font-family: 'Alegreya-sans';
+    list-style-type: none;
+    padding-left: 0;
 
-        & .listSubItem{
-            margin-left: 2em;
+    & h4{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    & .listItem{
+        margin-left: 0;
+        background-color: rgb(231, 229, 229);
+    }
+
+    & .listSubItem{
+        margin-left: 1em;
+        background-color: rgb(231, 229, 229);
+
+        & a{
+            color: rgb(63, 145, 221);
         }
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Alegreya-sans';
+    color:white;
+    font-size: 200%;
+
+    & h1{
+        font-family: 'Afacad';
+        font-weight: 100;
+    }
+
+    & a{
+        color:white;
+        text-decoration: none;
     }
 }
