@@ -35,9 +35,7 @@ body{
     margin: 0;
     display: flex;
     height: 3.5em;
-    max-width: 100%;
     padding: 1em 10em;
-    transition: 0.2s;
     z-index: 2;
     align-items: center;
 
@@ -61,10 +59,9 @@ body{
         & .myList{
             padding: 0;
             margin: 0;
-            width: 60%;
             justify-content: space-around;
+            gap: 3em;
             list-style-type: none;
-            gap: 50px;
             display: flex;
     
             & .listItem{
@@ -85,11 +82,11 @@ body{
     display: flex;
     align-items: flex-end;
     text-align: left;
+    overflow: hidden;
 
     & h1{
         color: white;
         max-width: 7em;
-        max-height: 5em;
         font-size: 7em;
         margin: 0;
         z-index: 1;
@@ -98,9 +95,9 @@ body{
 
     & img{
         position: absolute;
-        bottom: 0;
-        width: 70rem;
-        overflow: clip;
+        right: 2em;
+        max-width:100%;
+        max-height: 100%;
         z-index: 0;
     }
 }
@@ -122,10 +119,6 @@ body{
     & h1{
         font-family: 'Afacad';
         margin-top: 0;
-    }
-
-    & p {
-        background-color: rgb(231, 229, 229);
     }
 }
 
@@ -204,12 +197,10 @@ body{
 
     & .listItem{
         margin-left: 1em;
-        background-color: rgb(231, 229, 229);
     }
 
     & .listSubItem{
         margin-left: 2em;
-        background-color: rgb(231, 229, 229);
     }
 }
 
@@ -225,12 +216,10 @@ body{
 
     & .listItem{
         margin-left: 0;
-        background-color: rgb(231, 229, 229);
     }
 
     & .listSubItem{
         margin-left: 1em;
-        background-color: rgb(231, 229, 229);
 
         & a{
             color: rgb(63, 145, 221);
@@ -256,5 +245,68 @@ body{
     & a{
         color:white;
         text-decoration: none;
+    }
+}
+
+@media(max-width:1024px){
+    .header{
+        height: 3em;
+        padding: 1em 5em;
+    }
+}
+
+@media(max-width:978px){
+    .header{
+        height: fit-content;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:660px){
+    .img-phrase{
+        & h1{
+            font-size: 6em;
+        }
+    }
+}
+
+@media(max-width:570px){
+    .img-phrase{
+        & h1{
+            font-size: 5em;
+        }
+    }
+}
+
+@media(max-width:500px){
+    .header{
+        & h1{
+            font-size: 200%;
+        }
+
+        & .nav{
+            justify-content: center;
+            text-align: center;
+    
+            & .myList{
+                flex-direction: column;
+                gap: 1%;
+            }
+        }
+    }
+}
+
+@media(max-width:400px){
+    .header{
+        & h1{
+            font-size: 150%;
+        }
+        & .nav{
+            & .myList{
+                & a{
+                    font-size: 0.8em;
+                }
+            }
+        }
     }
 }
