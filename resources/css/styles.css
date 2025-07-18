@@ -16,11 +16,12 @@
 }
 
 @keyframes positionChange{
-    0%{left: 0;}
-    25%{left: 2%;}
-    50%{left: 4%;}
-    75%{left: 6%;}
-    100%{left: 8%;}
+    from{
+        left:0;
+    }
+    to{
+        left:5em;
+    }
 }
 
 html{
@@ -43,6 +44,8 @@ body{
     border: 0;
     margin: 0;
     display: flex;
+    height: 3.5em;
+    max-width: 100%;
     padding: 1em 10em;
     transition: 0.2s;
     z-index: 2;
@@ -63,14 +66,16 @@ body{
     & .nav{
         display: flex;
         flex:1;
-        justify-content: right;
+        justify-content: flex-end;
 
         & .myList{
             padding: 0;
             margin: 0;
+            width: 60%;
+            justify-content: space-around;
             list-style-type: none;
-            display: flex;
             gap: 50px;
+            display: flex;
     
             & .listItem{
 
@@ -90,31 +95,40 @@ body{
     display: flex;
     align-items: flex-end;
     text-align: left;
-}
-.img-phrase h1{
-    color: white;
-    max-width: 7em;
-    max-height: 5em;
-    font-size: 7em;
-    margin: 0;
-    z-index: 1;
-    font-family: 'Afacad';
-}
-.img-phrase img{
-    position: absolute;
-    right: 0;
-    max-width: 80em;
-    overflow: clip;
-    z-index: 0;
-    animation: positionChange 5s infinite alternate;
+
+    & h1{
+        color: white;
+        max-width: 7em;
+        max-height: 5em;
+        font-size: 7em;
+        margin: 0;
+        z-index: 1;
+        font-family: 'Afacad';
+    }
+
+    & img{
+        position: fixed;
+        bottom: 0;
+        width: 70rem;
+        overflow: clip;
+        z-index: 0;
+        animation: positionChange 5s infinite alternate;
+        animation-timing-function: linear;
+    }
 }
 
 #sobre{
+    position: relative;
     background-color: rgb(255, 255, 255);
     color: black;
+    left: 0;
+    right: 0;
     z-index: 1;
     font-size: 3em;
-    padding: 1em 2rem;
+    padding-top: 3.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
 
     & h1{
         font-family: 'Afacad';
@@ -123,5 +137,74 @@ body{
 
     & p {
         font-family: 'Alegreya-sans';
+    }
+}
+
+#conhecimentos{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 3em;
+    margin-top: 1em;
+    padding-top: 3.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+
+    & h1{
+        font-family: 'Afacad';
+        margin-top: 0;
+    }
+
+    & .linguagensList{
+        font-family: 'Alegreya-sans';
+        list-style-type: none;
+        padding-left: 0;
+
+        & h4{
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        & .listItem{
+            margin-left: 1em;
+        }
+    }
+
+    & .linguasList{
+        font-family: 'Alegreya-sans';
+        list-style-type: none;
+        padding-left: 0;
+
+        & h4{
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        & .listItem{
+            margin-left: 1em;
+        }
+    }
+
+    & .outrosList{
+        font-family: 'Alegreya-sans';
+        list-style-type: none;
+        padding-left: 0;
+
+        & h4{
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        & .listItem{
+            margin-left: 1em;
+        }
+
+        & .listSubItem{
+            margin-left: 2em;
+        }
     }
 }

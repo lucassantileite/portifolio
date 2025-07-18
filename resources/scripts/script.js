@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    /*fixed header invades section */
     $('.img-phrase').css({height: window.innerHeight});
     $(window).scroll(function(){
         var header = $('.header');
